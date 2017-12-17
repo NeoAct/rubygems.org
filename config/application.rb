@@ -16,7 +16,7 @@ module Gemcutter
     config.i18n.available_locales = [:en, :nl, 'zh-CN', 'zh-TW', 'pt-BR', :fr, :es, :de]
     config.i18n.fallbacks = true
 
-    config.middleware.insert 0, Rack::UTF8Sanitizer
+    config.middleware.insert 1, Rack::UTF8Sanitizer
     config.middleware.use Rack::Attack
     config.middleware.use Rack::Deflater
 
